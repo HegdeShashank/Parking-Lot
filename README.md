@@ -14,5 +14,4 @@ Method 2
 2. cd to the above mentioned folder
 3. then jar file can be run from the command below
 
-
-     java -jar "Parking Lot.jar" "File path of input file"
+        java -jar "Parking Lot.jar" "File path of input file"
