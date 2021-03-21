@@ -1,4 +1,8 @@
 # Parking-Lot
+
+This project consists of **src**   folder and **out** folder.
+The **src** folder consists of source code of all implemented project. 
+And the **out** folder consists of build files that can be used to run the application.
 There are 2 ways to run this project.
 
 Method 1
