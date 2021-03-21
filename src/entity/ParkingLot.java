@@ -1,6 +1,5 @@
 package entity;
 import helper.ParkingLotHelper;
-import helper.ValidationMessages;
 import java.util.List;
 import java.util.TreeSet;
 

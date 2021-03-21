@@ -1,5 +1,4 @@
 import entity.ParkingLot;
-import helper.CommonHelper;
 import helper.FileReader;
 import helper.ParkingActionHelper;
 import helper.ValidationMessages;
@@ -25,6 +24,7 @@ public class Application {
     }
 
 
+    // This function creates parking lot of given size.
     private static ParkingLot createParkingLot(int lotSize) {
         ParkingLot parkingLot = new ParkingLot(lotSize);
         System.out.println(ValidationMessages.getCreateParkingSuccessMessage(lotSize));
