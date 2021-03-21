@@ -9,7 +9,8 @@ public class ValidationMessages {
 
     public static final String CLEAR_PARKING_SLOT_ERROR_MESSAGE = "Error in clear parking slot";
     public static final String SLOTS_FULL_VALIDATION_MESSAGE = "All slots are full, cannot park new vehicle";
-    public static final String INVALID_INPUT_ERROR = "There is an error in provided input. Please correct it";
+    public static final String INVALID_INPUT_ERROR_MESSAGE = "There is an error in provided input. Please correct it";
+    public static final String INVALID_REGISTRATION_NUM_ERROR_MESSAGE = "No slot found for the provided registration number. Please check the registration number.";
 
     public static String getClearParkingLotSuccessMessage(int slotID, String registrationNumber,int age) {
         return "Slot number "+slotID+ " vacated, the car with vehicle registration number \""+registrationNumber+"\" left the space, the driver of the car was of age "+age;
@@ -19,7 +20,7 @@ public class ValidationMessages {
         return "Car with vehicle registration number \""+vehicleRegistrationNo+"\" has been parked at slot number "+nearestAvailableSlot;
     }
 
-    public static String getCreateParkingSuccessMessage(String noOfSlots) {
+    public static String getCreateParkingSuccessMessage(int noOfSlots) {
         return "Created parking of "+noOfSlots+" slots";
     }
 

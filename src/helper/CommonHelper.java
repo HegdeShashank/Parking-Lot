@@ -9,6 +9,7 @@ public class CommonHelper {
         throw new IllegalStateException("Utility class, cannot be instantiated");
     }
 
+    //This function takes list of integer and return comma separated string of integers.
     public static String convertIntegerListToCommaSeparatedString(List<Integer> list) {
         StringBuilder s = new StringBuilder("");
         for(int i=0;i<list.size();i++) {
@@ -18,6 +19,7 @@ public class CommonHelper {
         return s.toString();
     }
 
+    //This function takes list of String and return comma separated string of integers.
     public static String convertStringListToCommaSeparatedString(List<String> list) {
         StringBuilder s = new StringBuilder("");
         for(int i=0;i<list.size();i++) {

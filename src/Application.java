@@ -12,21 +12,23 @@ public class Application {
     public static void main(String[] args) throws FileNotFoundException {
         ParkingLot parkingLot = null;
         List<String> lines = FileReader.getLinesFromInputFile(args[0]);
-        int index = 0;
-        for(String line:lines){
-            String[] split = line.split(" ");
-            if(index == 0) {
-                parkingLot = new ParkingLot(Integer.parseInt(split[1]));
-                System.out.println(ValidationMessages.getCreateParkingSuccessMessage(split[1]));
+        for(int i=0;i<lines.size();i++) {
+            String ithLine = lines.get(i);
+            String[] lineSplit = ithLine.split(" ");
+            if (i == 0) {
+                parkingLot = createParkingLot(Integer.parseInt(lineSplit[1]));
             }
-
-            else
-                ParkingActionHelper.performAction(parkingLot,split);
-            index++;
-
+            else {
+                ParkingActionHelper.performAction(parkingLot, lineSplit);
+            }
         }
+    }
 
-        
+
+    private static ParkingLot createParkingLot(int lotSize) {
+        ParkingLot parkingLot = new ParkingLot(lotSize);
+        System.out.println(ValidationMessages.getCreateParkingSuccessMessage(lotSize));
+        return parkingLot;
     }
 }
 
