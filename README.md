@@ -2,14 +2,17 @@
 There are 2 ways to run this project.
 
 Method 1
-1. Go to the folder out/production/"Parking Lot"
+1. Go to the folder \out\production\"Parking Lot"
 2. There is a file called Application.class - This is the main class
 3. This class can be run by the command 
+
        java Application "File path of input file"
 
 
 Method 2 
-1. There is a jar file in folder "out/artifact/Parking_Lot_jar"
+1. There is a jar file in the folder out\artifacts\"Parking_Lot_jar"
 2. cd to the above mentioned folder
 3. then jar file can be run from the command below
-  java -jar "Parking Lot.jar" "File path of input file"
+
+
+     java -jar "Parking Lot.jar" "File path of input file"
