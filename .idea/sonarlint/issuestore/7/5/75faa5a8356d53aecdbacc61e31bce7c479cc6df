@@ -1,0 +1,11 @@
+
+|
+java:S1450"ZRemove the "isAllocated" field and declare it as a local variable in the relevant methods.(ÙÄ²·øÿÿÿÿ8éôö„/
+Q
+java:S1068"/Remove this unused "isAllocated" private field.(ÙÄ²·øÿÿÿÿ8éôö„/
+M
+java:S1068"0Remove this unused "allocatedCar" private field.(ı‰8éôö„/
+x
+java:S1450"[Remove the "allocatedCar" field and declare it as a local variable in the relevant methods.(ı‰8éôö„/
+O
+java:S1068"-Remove this unused "carSlotID" private field.(ÖÈ©³ÿÿÿÿÿ8éôö„/
