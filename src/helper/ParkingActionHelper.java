@@ -5,35 +5,39 @@ import entity.ParkingLot;
 import java.util.List;
 
 public class ParkingActionHelper {
-    public static String performAction(ParkingLot parkingLot, String[] actions ) {
-        String actionResult = "";
+    public static void performAction(ParkingLot parkingLot, String[] actions ) {
         switch (actions[0]) {
-            case ParkingActionTypes.PARK : actionResult = parkingLot.allocateParkingSlotToCar(actions[1],Integer.parseInt(actions[3]));
+            case ParkingActionTypes.PARK :
+                parkingLot.allocateParkingSlotToCar(actions[1],Integer.parseInt(actions[3]));
                 break;
             case ParkingActionTypes.SLOT_NUMBERS_FOR_DRIVER_OF_AGE:
-                actionResult = getListOfSlotNumbersWithGivenDriverAge(parkingLot,Integer.parseInt(actions[1]));
+                printListOfSlotNumbersWithGivenDriverAge(parkingLot,Integer.parseInt(actions[1]));
                 break;
             case ParkingActionTypes.SLOT_NUMBER_FOR_CAR_WITH_NUMBER:
-                actionResult = String.valueOf(parkingLot.getSlotNumberOfGivenCarRegistrationNumber(actions[1]));
+                printSlotNumberOfGivenCarRegistrationNumber(parkingLot,actions[1]);
                 break;
             case ParkingActionTypes.VEHICLE_REGISTRATION_NUMBER_FOR_DRIVER_OF_AGE:
-                actionResult = getListOfRegistrationNumberForDriverWithGivenAge(parkingLot,Integer.parseInt(actions[1]));
+                printListOfRegistrationNumberForDriverWithGivenAge(parkingLot,Integer.parseInt(actions[1]));
                 break;
-            case ParkingActionTypes.LEAVE : actionResult = parkingLot.clearParkingSlot(Integer.parseInt(actions[1]));
+            case ParkingActionTypes.LEAVE :
+                parkingLot.clearParkingSlot(Integer.parseInt(actions[1]));
                 break;
-            default:actionResult = ValidationMessages.INVALID_INPUT_ERROR;
+            default:System.out.println(ValidationMessages.INVALID_INPUT_ERROR);
         }
-        return actionResult;
     }
 
-    private static String getListOfSlotNumbersWithGivenDriverAge(ParkingLot parkingLot, int driverAge) {
+    private static void printListOfSlotNumbersWithGivenDriverAge(ParkingLot parkingLot, int driverAge) {
         List<Integer> listOfSlotNumbersWithGivenDriverAge =  parkingLot.getListOfSlotNumbersWithGivenDriverAge(driverAge);
-        return  CommonHelper.convertIntegerListToCommaSeparatedString(listOfSlotNumbersWithGivenDriverAge);
+        System.out.println( CommonHelper.convertIntegerListToCommaSeparatedString(listOfSlotNumbersWithGivenDriverAge));
     }
 
-    private static String getListOfRegistrationNumberForDriverWithGivenAge(ParkingLot parkingLot, int driverAge) {
+    private static void printListOfRegistrationNumberForDriverWithGivenAge(ParkingLot parkingLot, int driverAge) {
         List<String> listOfRegistrationNumberForDriverWithGivenAge = parkingLot.getListOfRegistrationNumberForDriverWithGivenAge(driverAge);
-        return CommonHelper.convertStringListToCommaSeparatedString(listOfRegistrationNumberForDriverWithGivenAge);
+        System.out.println(CommonHelper.convertStringListToCommaSeparatedString(listOfRegistrationNumberForDriverWithGivenAge)) ;
+    }
+
+    private static void printSlotNumberOfGivenCarRegistrationNumber(ParkingLot parkingLot,String registrationNumber) {
+        System.out.println(parkingLot.getSlotNumberOfGivenCarRegistrationNumber(registrationNumber));
     }
 }
 

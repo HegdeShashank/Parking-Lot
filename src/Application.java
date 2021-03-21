@@ -6,7 +6,6 @@ import helper.ValidationMessages;
 
 import java.io.FileNotFoundException;
 import java.util.List;
-import java.util.logging.Logger;
 
 public class Application {
 
@@ -21,12 +20,13 @@ public class Application {
                 System.out.println(ValidationMessages.getCreateParkingSuccessMessage(split[1]));
             }
 
-
             else
-                System.out.println(ParkingActionHelper.performAction(parkingLot,split));
+                ParkingActionHelper.performAction(parkingLot,split);
             index++;
 
         }
+
+        
     }
 }
 

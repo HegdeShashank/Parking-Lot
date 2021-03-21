@@ -22,13 +22,13 @@ public class CarSlot {
         return isAllocated;
     }
 
-    void addCarToTheCarSlot(Car car, int carSlotID) {
+    public void addCarToTheCarSlot(Car car, int carSlotID) {
         this.carSlotID = carSlotID;
         this.allocatedCar = car;
         this.isAllocated = true;
     }
 
-    void removeCarFromCarSlot() {
+    public void removeCarFromCarSlot() {
         this.isAllocated = false;
         this.allocatedCar = null;
     }
