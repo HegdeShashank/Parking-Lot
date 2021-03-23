@@ -19,3 +19,15 @@ Method 2
 3. then jar file can be run from the command below
 
         java -jar "Parking Lot.jar" "File path of input file"
+        
+Method 3
+If there is error in above methods due to mismatch in java compiler version 
+
+1. Go to folder src\
+2. run below command
+
+       javac Application.java 
+3. Above command should have created class files for each class.
+4. Now run below command
+
+       java Application "File path of input file"
